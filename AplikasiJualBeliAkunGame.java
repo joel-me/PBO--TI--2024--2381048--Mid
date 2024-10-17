@@ -107,21 +107,21 @@ public class AplikasiJualBeliAkunGame {
         System.out.println("Registrasi berhasil!");
     }
 
-    static void login(Scanner input) {
-   //     System.out.print("Masukkan username: ");
-        String username = input.nextLine();
-        System.out.print("Masukkan password: ");
-        String password = input.nextLine();
+   static void login(Scaner input) {
+       System.out.print("Masukkan username: ");
+       String username = input.nextLIne();
+       System.out.print("Masukkan password:");
+       String pasword = input.nextLine();
 
-        for (Pengguna pengguna : daftarPengguna) {
-            if (pengguna.username.equals(username) && pengguna.password.equals(password)) {
-                penggunaAktif = pengguna;
-                System.out.println("Login berhasil!");
-                return;
-            }
-        }
-        System.out.println("Username atau password salah!");
-    }
+       for (Pengguna pengguna : daftarPengguna) {
+           if (pengguna.username.equals(username) && pengguna.password.equals(password)) {
+               penggunaAktif = pengguna;
+               System.out.println("Login berhasil!");
+               return;
+           }
+       }
+       System.out.println("Username atau password salah!");
+   }
 
     static void tambahAkunGame(Scanner input) {
         System.out.print("Masukkan nama game: ");
@@ -196,13 +196,13 @@ public class AplikasiJualBeliAkunGame {
 
     static void beliAkunGame(Scanner input) {
         daftarAkunGame();
-        System.out.print("Pilih nomor akun game yang akan dibeli: ");
+        System.out.print("Pilih nomor akun game yang akan dibeli");
         int index = input.nextInt() - 1;
         if (index >= 0 && index < daftarAkunGame.size()) {
             AkunGame akun = daftarAkunGame.get(index);
             akun.terjual = true;
-            System.out.println("Akun game " + akun.namaGame + " berhasil dibeli!");
-        } else {
+            System.out.println("Akun game" + akun.namaGame + "berhasil dibeli!");
+        }else {
             System.out.println("Nomor akun tidak valid.");
         }
     }
