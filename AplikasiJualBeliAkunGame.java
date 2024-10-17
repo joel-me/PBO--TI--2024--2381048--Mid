@@ -108,7 +108,7 @@ public class AplikasiJualBeliAkunGame {
     }
 
     static void login(Scanner input) {
-        System.out.print("Masukkan username: ");
+   //     System.out.print("Masukkan username: ");
         String username = input.nextLine();
         System.out.print("Masukkan password: ");
         String password = input.nextLine();
